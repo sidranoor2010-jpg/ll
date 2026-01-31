@@ -1,0 +1,15 @@
+name: Run SAM Bot
+on:
+  schedule:
+    # Runs every 2 minutes 
+    - cron: '*/2 * * * *'
+  workflow_dispatch: # Allows manual trigger
+jobs:
+  build:
+    runs-on: ubuntu-latest 541511 611430 561210 541519 541990 236220
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run Bot Script
+        run: |
+          python bot.py # Replace with your actual command
